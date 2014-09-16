@@ -1,0 +1,3 @@
+function FrontpageCtrl($scope, $log){
+
+};
