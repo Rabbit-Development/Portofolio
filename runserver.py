@@ -22,6 +22,7 @@ env.register(
         'angular-bootstrap/ui-bootstrap-tpls.min.js',
         'angular-ui-utils/ui-utils.js',
         'frontpage/frontpage-ctrl.js',
+        'slideshow/slideshow.js',
         'portofolio.js',
         #filters='jsmin',
         output='portofolio-script.js'
@@ -33,8 +34,7 @@ env.register(
 env.register(
     'portofolio-style',
     assets.Bundle(
-        'bootstrap/dist/css/bootstrap.css',
-        'bootstrap/dist/css/bootstrap.css.map',
+        'bootstrap/dist/css/bootstrap.min.css',
         'portofolio.css',
         #filters='cssmin',
         output='portofolio-style.css'

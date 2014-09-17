@@ -34202,17 +34202,31 @@ angular.module('ui.utils',  [
 ]);
 
 function FrontpageCtrl($scope, $log){
-
+	$scope.sliderInterval = 5000;
+	$scope.slides = [{image:'static/graphics/Rabbit-logo.png', text: 'Rabbit logo!'}, {image:'static/graphics/Rabbit.png'}];
 };
+angular.module('slideshowDirective', [])
+.controller('SlideshowController', ['$scope', function($scope){
+    $scope.myInterval = 5000;
+    $scope.slides = [{image: '/static/graphics/Rabbit-logo.png', text: 'RabbitLOGO!'}, {image: '/static/graphics/Rabbit.png', text: 'Rabbit picture'}];
+}])
+.directive('slideshow', function() {
+    return {
+        restrict: 'E',
+        scope: {
+            slides: '=slides'
+        },
+        templateUrl: 'static/components/slideshow.html'
+    };
+});
 //entry point for the application
-var portofolio = angular.module('portofolio',[
+angular.module('portofolio',[
 	'ui.router',
 	'ui.bootstrap',
 	'ui.utils',
-]);
-
-//routing configuration for the application
-portofolio.config(function($stateProvider, $urlRouterProvider) {
+	'slideshowDirective'
+]).
+config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/frontpage');
 /*	var html5Mode = (window.history && window.history.pushState);
 	$locationProvider.html5Mode(html5Mode).hashPrefix('!');*/

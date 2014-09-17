@@ -48,3 +48,13 @@ body {
 	color: #fff;
 	background-color: green;
 }
+
+.carousel-control {
+	background-image: none;
+}
+
+.banner {
+	background-image: url("graphics/Bannerpattern.png");
+	height: 60vh;
+	color: #fff;
+}
