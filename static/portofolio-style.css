@@ -16,10 +16,11 @@ body {
 }
 
 .navbar {
+	height: 8vh;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	margin-bottom: 0px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid green;
 }
 
 .navbar-brand {
@@ -60,6 +61,69 @@ body {
 
 .banner {
 	background-image: url("graphics/Bannerpattern.png");
-	height: 60vh;
+	height: 62vh;
+}
+
+.banner-box {
+	background-color: #fff;
+	border-bottom: 1px solid green;
+	height: 100%;
+	padding-top: auto;
+	padding-bottom: auto;
+	text-align: center;
+	vertical-align: middle;
+	color: green;
+}
+
+.banner-content {
+}
+
+.banner-title {
+	margin-top: 10vh;
+	font-size: 48px;
+	font-family: Arial;
+}
+
+.banner-subtitle {
+	font-size: 32px;
+	font-family: Verdana;
+}
+
+.btn.banner-button {
+	background-color: #fff;
+	border: 2px solid green;
+	border-radius: 8px;
+	padding: 15px;
+	font-size: 32px;
+	font-family: Verdana;
+	color: green;
+}
+
+.btn.banner-button:hover {
+	background-color: green;
+	border: 2px solid #fff;
 	color: #fff;
+}
+
+.call-to-arms-banner {
+	background-color: white;
+	color: green;
+	border-radius: 8px;
+	border: 2px solid green;
+	padding: 15px;
+}
+
+.header.call-to-arms {
+	font-size: 32px;
+	font-family: Verdana;
+}
+
+.btn.call-to-arms {
+	background-color: green;
+	border: 2px solid #fff;
+	border-radius: 8px;
+	padding: 15px;
+	font-size: 32px;
+	font-family: Verdana;
+	color: #fff;	
 }
