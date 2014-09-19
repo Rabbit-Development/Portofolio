@@ -64,6 +64,11 @@ body {
 	height: 62vh;
 }
 
+.content {
+	background-color: #fff;
+	height: 100vh;
+}
+
 .banner-box {
 	background-color: #fff;
 	border-bottom: 1px solid green;
@@ -73,9 +78,6 @@ body {
 	text-align: center;
 	vertical-align: middle;
 	color: green;
-}
-
-.banner-content {
 }
 
 .banner-title {
@@ -113,7 +115,7 @@ body {
 	padding: 15px;
 }
 
-.header.call-to-arms {
+.call-to-arms-text {
 	font-size: 32px;
 	font-family: Verdana;
 }
@@ -126,4 +128,15 @@ body {
 	font-size: 32px;
 	font-family: Verdana;
 	color: #fff;	
+}
+
+.btn.call-to-arms:hover {
+	background-color: #fff;
+	border: 2px solid green;
+	color: green;
+}
+
+.footer {
+	background-image: url("graphics/Bannerpattern.png");
+	height: 8vh; 
 }
