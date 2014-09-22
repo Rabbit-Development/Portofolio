@@ -70,14 +70,13 @@ body {
 }
 
 .banner-box {
-	background-color: #fff;
 	border-bottom: 1px solid green;
 	height: 100%;
 	padding-top: auto;
 	padding-bottom: auto;
 	text-align: center;
 	vertical-align: middle;
-	color: green;
+	color: white;
 }
 
 .banner-title {
@@ -91,7 +90,7 @@ body {
 	font-family: Verdana;
 }
 
-.btn.banner-button {
+.banner-button {
 	background-color: #fff;
 	border: 2px solid green;
 	border-radius: 8px;
@@ -101,8 +100,8 @@ body {
 	color: green;
 }
 
-.btn.banner-button:hover {
-	background-color: green;
+.banner-button:hover {
+	background-image: url("graphics/Bannerpattern.png");
 	border: 2px solid #fff;
 	color: #fff;
 }
