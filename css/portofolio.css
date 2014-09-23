@@ -7,7 +7,7 @@ a {
 }
 
 body {
-	font-family: verdana;
+	font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .navbar {
@@ -46,8 +46,8 @@ body {
 }
 
 .navbar-nav > li > a:hover {
-	color: #fff;
-	background-color: green;
+	color: green;
+	background-color: #fff;
 }
 
 .carousel-control {
@@ -77,12 +77,13 @@ body {
 .banner-title {
 	margin-top: 10vh;
 	font-size: 48px;
-	font-family: Arial;
+	font-family: 'Open Sans', Verdana, sans-serif;
+	text-align: center;
 }
 
 .banner-subtitle {
-	font-size: 32px;
-	font-family: Verdana;
+	font-size: 24px;
+	font-family: 'Open Sans', Verdana, sans-serif;
 }
 
 .banner-button {
@@ -90,13 +91,14 @@ body {
 	border: 2px solid green;
 	border-radius: 8px;
 	padding: 15px;
+	margin-top: 5vh;
 	font-size: 32px;
-	font-family: Verdana;
+	font-family: 'Open Sans', Verdana, sans-serif;
 	color: green;
 }
 
 .banner-button:hover {
-	background-image: url("graphics/Bannerpattern.png");
+	background-color: transparent;
 	border: 2px solid #fff;
 	color: #fff;
 }
