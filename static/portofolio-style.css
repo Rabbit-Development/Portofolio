@@ -190,6 +190,20 @@ hr {
 	background-image: url("graphics/Bannerpattern.png");
 	color: #fff;
 }
+
+.person-image{
+	text-align: center;
+	width: 150px;
+	height: 150px;
+}
+
+.person-text{
+	text-align: center;
+}
+
+.person-box{
+	text-align: center;
+}
 .contact-container {
 	border-top: 1px solid #fff;
 	background-image: url("graphics/Bannerpattern.png");
