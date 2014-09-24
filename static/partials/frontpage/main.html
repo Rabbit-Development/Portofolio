@@ -1,6 +1,6 @@
-<nav id="Home" class="navbar">
-	<div class="container-fluid">
-		<div class="navbar-header">
+<nav id="Home" class="navbar" >
+	<div class="container-fluid" in-view-container>
+		<div class="navbar-header" in-view="$inview ? topButton = false : topButton = true">
 			<button type="button" class="navbar-toggle collapsed" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
 		        <span class="sr-only">Toggle navigation</span>
 		        Menu
@@ -12,7 +12,7 @@
 		<div collapse="navCollapsed" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 				<li><a ng-click="scrollTo('Home')">Hjem</a></li>
-				<li><a ng-click="scrollTo('Products')">Produkter</a></li>
+				<li><a ng-click="scrollTo('Products')">Tjenester</a></li>
 				<li><a ng-click="scrollTo('Projects')">Prosjekter</a></li>
 				<li><a ng-click="scrollTo('About us')">Om oss</a></li>
 				<li><a ng-click="scrollTo('Contact')">Kontakt oss</a></li>
@@ -20,7 +20,7 @@
 		</div>
 	</div>
 </nav>
-<button ng-click="scrollTo('Home')" class="top-button" collapse="topButton">
+<button ng-click="scrollTo('Home')" class="top-button" ng-show="topButton">
 	<i class="fa fa-2x fa-chevron-up"></i>
 </button>
 <div class="container-fluid banner-container">
@@ -39,7 +39,7 @@
 <div id="Products" class="container-fluid product-container">
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-4">
-			<h1 class="banner-title">Produktene våre</h1>
+			<h1 class="banner-title">Våre Tjenester</h1>
 		</div>
 	</div>
 	<div class="row">
@@ -83,7 +83,7 @@
 <div id="Projects" class="container-fluid projects-container">
 	<div class="row">
 		<h1 class="banner-title">Prosjekter</h1>
-		<div ng-include="'static/partials/frontpage/carousel.html'" style="height: 100%;"></div>
+		<div ng-include="'static/partials/frontpage/carousel.html'" style="height: 100%; margin-left:50px; margin-right:50px;"></div>
 	</div>
 </div>
 <div id="About us" class="container-fluid about-container">
@@ -92,8 +92,36 @@
 	</div>
 </div>
 <div id="Contact" class="container-fluid contact-container">
-	<div class="row">
-		<h1 class="banner-title">Kontakt oss</h1>
+	<div class="container">
+		<div class="row">
+			<h1 class="banner-title" style="margin-bottom: 10vh;">Kontakt oss</h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu posuere felis. Pellentesque in mi ut mi ultricies dapibus nec non dui. Aliquam tincidunt risus facilisis nibh luctus feugiat. Nullam pulvinar sem accumsan nisi vulputate, non varius arcu imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque ac nunc a velit molestie tincidunt eu vitae diam. Fusce quis condimentum quam, id tincidunt risus. Nam vitae tortor quis tortor tincidunt imperdiet quis quis erat. Suspendisse egestas at nisl vehicula efficitur. Duis semper ipsum nunc, a vulputate risus pellentesque nec. Praesent pretium purus a rhoncus finibus. Vestibulum et nibh ac magna porta semper. Suspendisse vel lectus sit amet lorem viverra viverra at et sem. Aliquam vitae dolor ac tortor commodo bibendum sed porta mauris.</p>
+				<p>
+					Aliquam consequat neque a tortor commodo feugiat. Duis at diam aliquet, placerat urna quis, imperdiet orci. In iaculis porta lacus sit amet viverra. Nunc vestibulum turpis id turpis porttitor faucibus. Sed a sagittis nisl. Sed bibendum accumsan nulla sit amet lacinia. Quisque fringilla hendrerit mauris. Curabitur vel velit sit amet ante congue tristique. Quisque non accumsan ligula.
+				</p>
+			</div>
+			<div class="col-sm-6">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-sm-2">Email:</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2">Description:</label>
+						<div class="col-sm-10">
+							<textarea class="form-control col-sm-9" rows="15" style="resize: none;"></textarea>
+						</div>
+					</div>
+					<button class="col-sm-10 col-sm-offset-2 contact-button">Send</button>
+				</form>
+			</div>
+		</div>
 	</div>
 </div>
 <div class="row footer">

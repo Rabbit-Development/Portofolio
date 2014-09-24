@@ -1,6 +1,4 @@
 function FrontpageCtrl($scope, $log, $anchorScroll, $location){
-
-	$scope.topButton = false;
 	
 	$scope.scrollTo = function(eID) {
         var startY = currentYPosition();
