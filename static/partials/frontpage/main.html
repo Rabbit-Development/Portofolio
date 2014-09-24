@@ -1,4 +1,4 @@
-<nav id="home" class="navbar">
+<nav id="Home" class="navbar">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
@@ -20,21 +20,19 @@
 		</div>
 	</div>
 </nav>
-<button class="top-button">
-	UP!
+<button ng-click="scrollTo('Home')" class="top-button" collapse="topButton">
+	<i class="fa fa-2x fa-chevron-up"></i>
 </button>
-<div class="container-fluid">
-	<div class="row banner">
-		<div class="container banner-box">
-			<div class="row">
-				<h1 class="banner-title col-sm-offset-1 col-sm-10">Webtjenester og Apputvikling</h1>
-			</div>
-			<div class="row">
-				<h2 class="banner-subtitle col-sm-offset-2 col-sm-8">La oss finne den beste løsningen!</h2>
-			</div>
-			<div class="row">
-				<button ng-click="scrollTo('Contact')" class="banner-button col-sm-offset-4 col-sm-4">Kontakt oss!</button>
-			</div>
+<div class="container-fluid banner-container">
+	<div class="container banner-box">
+		<div class="row">
+			<h1 class="banner-title col-sm-offset-1 col-sm-10">Webtjenester og Apputvikling</h1>
+		</div>
+		<div class="row">
+			<h2 class="banner-subtitle col-sm-offset-2 col-sm-8">La oss finne den beste løsningen!</h2>
+		</div>
+		<div class="row">
+			<button ng-click="scrollTo('Contact')" class="banner-button col-sm-offset-4 col-sm-4">Kontakt oss!</button>
 		</div>
 	</div>
 </div>
@@ -45,13 +43,13 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-4">
+		<div class="col-sm-4 col-sm-offset-2">
 			<div class="product-box">
 				<div class="row">
-					<img class="col-sm-8 col-sm-offset-2" src="static/graphics/Rabbit.png">
+					<img class="col-sm-8 col-sm-offset-2" src="static/graphics/Phone-Product.png">
 				</div>
 				<div class="row">
-					<h2 class="product-header">Product</h2>
+					<h2 class="product-header">Apps</h2>
 					<p class="product-text">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta nisi quam, eget rutrum ipsum fringilla eget. Sed volutpat tempus interdum. Etiam nec est faucibus, iaculis ex eget, finibus erat.
 					</p>
@@ -61,23 +59,10 @@
 		<div class="col-sm-4">
 			<div class="product-box">
 				<div class="row">
-					<img class="col-sm-8 col-sm-offset-2" src="static/graphics/Rabbit.png">
+					<img class="col-sm-8 col-sm-offset-2" src="static/graphics/Website-Product.png">
 				</div>
 				<div class="row">
-					<h2 class="product-header">Product</h2>
-					<p class="product-text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta nisi quam, eget rutrum ipsum fringilla eget. Sed volutpat tempus interdum. Etiam nec est faucibus, iaculis ex eget, finibus erat.
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-4">
-			<div class="product-box">
-				<div class="row">
-					<img class="col-sm-8 col-sm-offset-2" src="static/graphics/Rabbit.png">
-				</div>
-				<div class="row">
-					<h2 class="product-header">Product</h2>
+					<h2 class="product-header">Webtjenester</h2>
 					<p class="product-text">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta nisi quam, eget rutrum ipsum fringilla eget. Sed volutpat tempus interdum. Etiam nec est faucibus, iaculis ex eget, finibus erat.
 					</p>
@@ -86,23 +71,30 @@
 		</div>
 	</div>
 </div>
-<div class="row call-to-arms-row">
+<!-- <div class="row call-to-arms-row">
 	<div class="container">
 		<div class="row call-to-arms-banner">
 			<h2 class="call-to-arms-text col-sm-8">Få jobben gjort!</h2>
 			<button ng-click="scrollTo('Contact')" class="call-to-arms-btn col-sm-4">Kontakt oss!</button>
 		</div>
 	</div>
-</div>
-<div id="Projects" class="container-fluid">
-	<div class="row content"><h1>Projects!</h1></div>
-</div>
+</div> -->
 <hr>
-<div id="About us" class="container-fluid">
-	<div class="row content"><h1>About us!</h1></div>
+<div id="Projects" class="container-fluid projects-container">
+	<div class="row">
+		<h1 class="banner-title">Prosjekter</h1>
+		<div ng-include="'static/partials/frontpage/carousel.html'" style="height: 100%;"></div>
+	</div>
 </div>
-<div id="Contact" class="container-fluid">
-	<div class="row content"><h1>Contact us!!</h1></div>
+<div id="About us" class="container-fluid about-container">
+	<div class="row">
+		<h1 class="banner-title">Om oss</h1>
+	</div>
+</div>
+<div id="Contact" class="container-fluid contact-container">
+	<div class="row">
+		<h1 class="banner-title">Kontakt oss</h1>
+	</div>
 </div>
 <div class="row footer">
 </div>

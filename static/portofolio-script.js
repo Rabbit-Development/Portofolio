@@ -34213,8 +34213,8 @@ angular.module('ui.utils',  [
 ]);
 
 function FrontpageCtrl($scope, $log, $anchorScroll, $location){
-	$scope.sliderInterval = 5000;
-	$scope.slides = [{image:'static/graphics/Rabbit-logo.png', text: 'Rabbit logo!'}, {image:'static/graphics/Rabbit.png'}];
+
+	$scope.topButton = false;
 	
 	$scope.scrollTo = function(eID) {
         var startY = currentYPosition();
@@ -34243,6 +34243,7 @@ function FrontpageCtrl($scope, $log, $anchorScroll, $location){
     function currentYPosition() {
         // Firefox, Chrome, Opera, Safari
         if (self.pageYOffset) return self.pageYOffset;
+        $log.info(self.pageYOffset);
         // Internet Explorer 6 - standards mode
         if (document.documentElement && document.documentElement.scrollTop)
             return document.documentElement.scrollTop;
@@ -34294,3 +34295,7 @@ config(function($stateProvider, $urlRouterProvider) {
 			controller: FrontpageCtrl
 		});
 });
+function ProjectsCtrl($scope, $log, $location){
+	$scope.sliderInterval = 5000;
+	$scope.slides = [{image:'static/graphics/Project-Frame.png', text: 'Rabbit logo!'}, {image:'static/graphics/Project-Frame.png'}];
+};

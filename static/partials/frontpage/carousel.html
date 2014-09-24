@@ -1,0 +1,16 @@
+<script id="template/carousel/carousel.html" type="text/ng-template">
+	<div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel" ng-swipe-right="prev()" ng-swipe-left="next()" >
+		<div class="carousel-inner" ng-transclude>
+		</div>
+		<a class="left carousel-control" ng-click="prev()" ng-show="slides.length > 1" style="position: absolute; top: 50%; text-align: center; color: #000; border: none; background-image: none;"><span class="fa fa-3x fa-chevron-left"></span></a>
+		<a class="right carousel-control" ng-click="next()" ng-show="slides.length > 1" style="position: absolute; top: 50%; text-align: center; color: #000; border: none; background-image: none;"><i class="fa fa-3x fa-chevron-right"></i></a>
+	</div>
+</script>
+
+<div ng-controller="ProjectsCtrl">
+	<carousel interval="sliderInterval" style="height: 100%; width: 100%">
+		<slide ng-repeat="slide in slides" active="slide.active">
+			<img ng-src="{{slide.image}}" style="margin:auto; height: 60vh;">
+		</slide>
+	</carousel>
+</div>

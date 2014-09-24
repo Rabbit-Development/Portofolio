@@ -24,6 +24,7 @@ env.register(
         'frontpage/frontpage-ctrl.js',
         'slideshow/slideshow.js',
         'portofolio.js',
+        'frontpage/projects-ctrl.js',
         #filters='jsmin',
         output='portofolio-script.js'
     )
@@ -36,6 +37,12 @@ env.register(
     assets.Bundle(
         'bootstrap/dist/css/bootstrap.min.css',
         'portofolio.css',
+        'navbar.css',
+        'banner.css',
+        'product.css',
+        'projects.css',
+        'about-us.css',
+        'contact-us.css',
         #filters='cssmin',
         output='portofolio-style.css'
     )
