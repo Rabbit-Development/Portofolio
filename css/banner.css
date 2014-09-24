@@ -1,18 +1,14 @@
 .banner-container {
 	background-image: url("graphics/Bannerpattern.png");
-	height: 62vh;
-}
-
-.banner-box {
+	padding: 1vh;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
 	color: #fff;
 	font-family: 'Open Sans', Verdana, sans-serif;
 	text-align: center;
-	margin-top: 10vh;
-	margin-bottom: 10vh;
 }
 
 .banner-title {
-	margin-top: 10vh;
 	font-size: 48px;
 	font-family: 'Open Sans', Verdana, sans-serif;
 	text-align: center;

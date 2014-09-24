@@ -1,5 +1,4 @@
 .navbar {
-	height: 8vh;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	margin-bottom: 0px;
@@ -8,9 +7,7 @@
 }
 
 .navbar-brand {
-	height: 50px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+	height: 100%;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -26,12 +23,11 @@
 .navbar-toggle {
 	border-radius: 8px;
 	border: 1px solid #eee;
+	height: 100%;
 }
 
 .navbar-nav > li > a {
 	font-size: 18px;
-	border-radius: 8px;
-	margin-right: 15px;
 	background-color: #fff;
 }
 

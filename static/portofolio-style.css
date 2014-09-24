@@ -75,7 +75,6 @@ hr {
 }
 
 .navbar {
-	height: 8vh;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	margin-bottom: 0px;
@@ -84,9 +83,7 @@ hr {
 }
 
 .navbar-brand {
-	height: 50px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+	height: 100%;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -102,12 +99,11 @@ hr {
 .navbar-toggle {
 	border-radius: 8px;
 	border: 1px solid #eee;
+	height: 100%;
 }
 
 .navbar-nav > li > a {
 	font-size: 18px;
-	border-radius: 8px;
-	margin-right: 15px;
 	background-color: #fff;
 }
 
@@ -118,19 +114,15 @@ hr {
 }
 .banner-container {
 	background-image: url("graphics/Bannerpattern.png");
-	height: 62vh;
-}
-
-.banner-box {
+	padding: 1vh;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
 	color: #fff;
 	font-family: 'Open Sans', Verdana, sans-serif;
 	text-align: center;
-	margin-top: 10vh;
-	margin-bottom: 10vh;
 }
 
 .banner-title {
-	margin-top: 10vh;
 	font-size: 48px;
 	font-family: 'Open Sans', Verdana, sans-serif;
 	text-align: center;
@@ -159,10 +151,11 @@ hr {
 }
 .product-box {
 	margin: 25px;
+	padding: 50px;
 }
 
 .product-container {
-	height: 80vh;
+	padding: 50px;
 }
 
 .product-header {
@@ -199,9 +192,10 @@ hr {
 }
 .contact-container {
 	border-top: 1px solid #fff;
-	height: 92vh;
 	background-image: url("graphics/Bannerpattern.png");
 	color: #fff;
+	padding-bottom: 10vh;
+	padding-top: 5vh;
 }
 
 .contact-button {

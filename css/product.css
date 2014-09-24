@@ -1,9 +1,10 @@
 .product-box {
 	margin: 25px;
+	padding: 50px;
 }
 
 .product-container {
-	height: 80vh;
+	padding: 50px;
 }
 
 .product-header {

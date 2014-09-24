@@ -20,53 +20,42 @@
 		</div>
 	</div>
 </nav>
-<button ng-click="scrollTo('Home')" class="top-button" ng-show="topButton">
-	<i class="fa fa-2x fa-chevron-up"></i>
-</button>
 <div class="container-fluid banner-container">
-	<div class="container banner-box">
-		<div class="row">
-			<h1 class="banner-title col-sm-offset-1 col-sm-10">Webtjenester og Apputvikling</h1>
-		</div>
-		<div class="row">
-			<h2 class="banner-subtitle col-sm-offset-2 col-sm-8">La oss finne den beste løsningen!</h2>
-		</div>
-		<div class="row">
-			<button ng-click="scrollTo('Contact')" class="banner-button col-sm-offset-4 col-sm-4">Kontakt oss!</button>
-		</div>
+	<div class="row">
+		<h1 class="banner-title">Webtjenester og Apputvikling</h1>
+	</div>
+	<div class="row">
+		<h2 class="banner-subtitle">La oss finne den beste løsningen!</h2>
+	</div>
+	<div class="row">
+		<button ng-click="scrollTo('Contact')" class="banner-button col-sm-offset-4 col-sm-4">Kontakt oss!</button>
 	</div>
 </div>
 <div id="Products" class="container-fluid product-container">
 	<div class="row">
-		<div class="col-sm-4 col-sm-offset-4">
-			<h1 class="banner-title">Våre Tjenester</h1>
-		</div>
+		<h1 class="banner-title">Våre Tjenester</h1>
 	</div>
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-2">
-			<div class="product-box">
-				<div class="row">
-					<img class="col-sm-8 col-sm-offset-2" src="static/graphics/Phone-Product.png">
-				</div>
-				<div class="row">
-					<h2 class="product-header">Applikasjoner</h2>
-					<p class="product-text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta nisi quam, eget rutrum ipsum fringilla eget. Sed volutpat tempus interdum. Etiam nec est faucibus, iaculis ex eget, finibus erat.
-					</p>
-				</div>
+			<div class="row">
+				<img width="100%" src="static/graphics/Phone-Product.png">
+			</div>
+			<div class="row">
+				<h2 class="product-header">Applikasjoner</h2>
+				<p class="product-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta nisi quam, eget rutrum ipsum fringilla eget. Sed volutpat tempus interdum. Etiam nec est faucibus, iaculis ex eget, finibus erat.
+				</p>
 			</div>
 		</div>
 		<div class="col-sm-4">
-			<div class="product-box">
-				<div class="row">
-					<img class="col-sm-8 col-sm-offset-2" src="static/graphics/Website-Product.png">
-				</div>
-				<div class="row">
-					<h2 class="product-header">Webtjenester</h2>
-					<p class="product-text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta nisi quam, eget rutrum ipsum fringilla eget. Sed volutpat tempus interdum. Etiam nec est faucibus, iaculis ex eget, finibus erat.
-					</p>
-				</div>
+			<div class="row">
+				<img width="100%" src="static/graphics/Website-Product.png">
+			</div>
+			<div class="row">
+				<h2 class="product-header">Webtjenester</h2>
+				<p class="product-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta nisi quam, eget rutrum ipsum fringilla eget. Sed volutpat tempus interdum. Etiam nec est faucibus, iaculis ex eget, finibus erat.
+				</p>
 			</div>
 		</div>
 	</div>
@@ -82,8 +71,10 @@
 <hr>
 <div id="Projects" class="container-fluid projects-container">
 	<div class="row">
-		<h1 class="banner-title">Prosjekter</h1>
-		<div ng-include="'static/partials/frontpage/carousel.html'" style="height: 100%; margin-left:50px; margin-right:50px;"></div>
+		<div class="col-sm-12">
+			<h1 class="banner-title">Prosjekter</h1>
+			<div ng-include="'static/partials/frontpage/carousel.html'"></div>
+		</div>
 	</div>
 </div>
 <div id="About us" class="container-fluid about-container">
@@ -116,37 +107,38 @@
 	</div>
 </div>
 <div id="Contact" class="container-fluid contact-container">
-	<div class="container">
-		<div class="row">
-			<h1 class="banner-title" style="margin-bottom: 10vh;">Kontakt oss</h1>
+	<div class="row">
+		<h1 class="banner-title">Kontakt oss</h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu posuere felis. Pellentesque in mi ut mi ultricies dapibus nec non dui. Aliquam tincidunt risus facilisis nibh luctus feugiat. Nullam pulvinar sem accumsan nisi vulputate, non varius arcu imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque ac nunc a velit molestie tincidunt eu vitae diam. Fusce quis condimentum quam, id tincidunt risus. Nam vitae tortor quis tortor tincidunt imperdiet quis quis erat. Suspendisse egestas at nisl vehicula efficitur. Duis semper ipsum nunc, a vulputate risus pellentesque nec. Praesent pretium purus a rhoncus finibus. Vestibulum et nibh ac magna porta semper. Suspendisse vel lectus sit amet lorem viverra viverra at et sem. Aliquam vitae dolor ac tortor commodo bibendum sed porta mauris.</p>
+			<p>
+				Aliquam consequat neque a tortor commodo feugiat. Duis at diam aliquet, placerat urna quis, imperdiet orci. In iaculis porta lacus sit amet viverra. Nunc vestibulum turpis id turpis porttitor faucibus. Sed a sagittis nisl. Sed bibendum accumsan nulla sit amet lacinia. Quisque fringilla hendrerit mauris. Curabitur vel velit sit amet ante congue tristique. Quisque non accumsan ligula.
+			</p>
 		</div>
-		<div class="row">
-			<div class="col-sm-6">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu posuere felis. Pellentesque in mi ut mi ultricies dapibus nec non dui. Aliquam tincidunt risus facilisis nibh luctus feugiat. Nullam pulvinar sem accumsan nisi vulputate, non varius arcu imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque ac nunc a velit molestie tincidunt eu vitae diam. Fusce quis condimentum quam, id tincidunt risus. Nam vitae tortor quis tortor tincidunt imperdiet quis quis erat. Suspendisse egestas at nisl vehicula efficitur. Duis semper ipsum nunc, a vulputate risus pellentesque nec. Praesent pretium purus a rhoncus finibus. Vestibulum et nibh ac magna porta semper. Suspendisse vel lectus sit amet lorem viverra viverra at et sem. Aliquam vitae dolor ac tortor commodo bibendum sed porta mauris.</p>
-				<p>
-					Aliquam consequat neque a tortor commodo feugiat. Duis at diam aliquet, placerat urna quis, imperdiet orci. In iaculis porta lacus sit amet viverra. Nunc vestibulum turpis id turpis porttitor faucibus. Sed a sagittis nisl. Sed bibendum accumsan nulla sit amet lacinia. Quisque fringilla hendrerit mauris. Curabitur vel velit sit amet ante congue tristique. Quisque non accumsan ligula.
-				</p>
-			</div>
-			<div class="col-sm-6">
-				<form class="form-horizontal">
-					<div class="form-group">
-						<label class="control-label col-sm-2">Email:</label>
-						<div class="col-sm-10">
-							<input type="email" class="form-control">
-						</div>
+		<div class="col-sm-6">
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label class="control-label col-sm-2">Email:</label>
+					<div class="col-sm-10">
+						<input type="email" class="form-control">
 					</div>
-					<div class="form-group">
-						<label class="control-label col-sm-2">Description:</label>
-						<div class="col-sm-10">
-							<textarea class="form-control col-sm-9" rows="15" style="resize: none;"></textarea>
-						</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2">Description:</label>
+					<div class="col-sm-10">
+						<textarea class="form-control col-sm-9" rows="15" style="resize: none;"></textarea>
 					</div>
-					<button class="col-sm-10 col-sm-offset-2 contact-button">Send</button>
-				</form>
-			</div>
+				</div>
+				<button class="col-xs-12 col-sm-10 col-sm-offset-2 contact-button">Send</button>
+			</form>
 		</div>
 	</div>
 </div>
 <div class="row footer">
 </div>
+<button ng-click="scrollTo('Home')" class="top-button" ng-show="topButton">
+	<i class="fa fa-2x fa-chevron-up"></i>
+</button>
