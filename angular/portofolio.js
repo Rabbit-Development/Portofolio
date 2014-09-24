@@ -3,7 +3,7 @@ angular.module('portofolio',[
 	'ui.router',
 	'ui.bootstrap',
 	'ui.utils',
-	'slideshowDirective'
+	'angular-inview'
 ]).
 config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/frontpage');

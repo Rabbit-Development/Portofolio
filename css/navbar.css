@@ -38,4 +38,5 @@
 .navbar-nav > li > a:hover {
 	color: green;
 	background-color: #fff;
+	text-decoration: underline;
 }

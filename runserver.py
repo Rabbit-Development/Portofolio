@@ -21,6 +21,7 @@ env.register(
         'angular-ui-router/release/angular-ui-router.min.js',
         'angular-bootstrap/ui-bootstrap-tpls.min.js',
         'angular-ui-utils/ui-utils.js',
+        'angular-inview/angular-inview.js',
         'frontpage/frontpage-ctrl.js',
         'slideshow/slideshow.js',
         'portofolio.js',
