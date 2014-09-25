@@ -4,15 +4,16 @@ angular.module('portofolio',[
 	'ui.bootstrap',
 	'ui.utils',
 	'angular-inview',
+	'scrollto'
 ]).
 config(function($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('/frontpage');
-/*	var html5Mode = (window.history && window.history.pushState);
+	$urlRouterProvider.otherwise('/index');
+	/*var html5Mode = (window.history && window.history.pushState);
 	$locationProvider.html5Mode(html5Mode).hashPrefix('!');*/
 
 	$stateProvider
 		.state('frontpage', {
-			url: "/frontpage",
+			url: '/index',
 			views: {
 				'banner': {
 					templateUrl: "static/partials/banner.html"
@@ -31,20 +32,4 @@ config(function($stateProvider, $urlRouterProvider) {
 				}
 			}
 		});
-}).directive('scrollOnClick', function() {
-  return {
-    restrict: 'A',
-    link: function(scope, $elm, attrs) {
-      var idToScroll = attrs.href;
-      $elm.on('click', function() {
-        var $target;
-        if (idToScroll) {
-          $target = $(idToScroll);
-        } else {
-          $target = $elm;
-        }
-        $("body").animate({scrollTop: $target.offset().top}, "slow");
-      });
-    }
-  }
 });

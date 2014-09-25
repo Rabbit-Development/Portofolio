@@ -10,6 +10,7 @@ env.load_path = [
     os.path.join(os.path.dirname(__file__), 'css'),
     os.path.join(os.path.dirname(__file__), 'angular'),
     os.path.join(os.path.dirname(__file__), 'bower_components'),
+    os.path.join(os.path.dirname(__file__), 'graphics'),
 ]
 
 env.register(
@@ -22,16 +23,12 @@ env.register(
         'angular-bootstrap/ui-bootstrap-tpls.min.js',
         'angular-ui-utils/ui-utils.js',
         'angular-inview/angular-inview.js',
-        'frontpage/frontpage-ctrl.js',
-        'slideshow/slideshow.js',
+        'angular-scrollto/angular-scrollto.js',
         'portofolio.js',
-        'frontpage/projects-ctrl.js',
         #filters='jsmin',
         output='portofolio-script.js'
     )
 )
-
-
 
 env.register(
     'portofolio-style',

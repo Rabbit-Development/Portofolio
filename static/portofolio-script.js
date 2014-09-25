@@ -34496,83 +34496,55 @@ angular.module('ui.utils',  [
 
 }).call(this);
 
-function FrontpageCtrl($scope, $log, $anchorScroll, $location){
-	
-	$scope.scrollTo = function(eID) {
-        var startY = currentYPosition();
-        var stopY = elmYPosition(eID);
-        var distance = stopY > startY ? stopY - startY : startY - stopY;
-        if (distance < 100) {
-            scrollTo(0, stopY); return;
-        }
-        var speed = Math.round(distance / 100);
-        if (speed >= 70) speed = 70;
-        var step = Math.round(distance / 50);
-        var leapY = stopY > startY ? startY + step : startY - step;
-        var timer = 0;
-        if (stopY > startY) {
-            for ( var i=startY; i<stopY; i+=step ) {
-                setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-            } return;
-        }
-        for ( var i=startY; i>stopY; i-=step ) {
-            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
-        }
-    }
-        
-    function currentYPosition() {
-        // Firefox, Chrome, Opera, Safari
-        if (self.pageYOffset) return self.pageYOffset;
-        $log.info(self.pageYOffset);
-        // Internet Explorer 6 - standards mode
-        if (document.documentElement && document.documentElement.scrollTop)
-            return document.documentElement.scrollTop;
-        // Internet Explorer 6, 7 and 8
-        if (document.body.scrollTop) return document.body.scrollTop;
-        return 0;
+angular.module('scrollto', []);
+
+angular.module('scrollto')
+  .directive('scrollTo', ['$timeout', function ($timeout) {
+    
+    function scroll (settings) {
+      return function () {
+        var scrollPane = angular.element(settings.container);
+        var scrollTo = (typeof settings.scrollTo == "number") ? settings.scrollTo : angular.element(settings.scrollTo);
+        var scrollY = (typeof scrollTo == "number") ? scrollTo : scrollTo.offset().top - settings.offset;
+        scrollPane.animate({scrollTop : scrollY }, settings.duration, settings.easing, function(){
+          if (typeof callback == 'function') { callback.call(this); }
+        });
+      }
     }
     
-    function elmYPosition(eID) {
-        var elm = document.getElementById(eID);
-        var y = elm.offsetTop;
-        var node = elm;
-        while (node.offsetParent && node.offsetParent != document.body) {
-            node = node.offsetParent;
-            y += node.offsetTop;
-        } return y;
-    }
-};
-angular.module('slideshowDirective', [])
-.controller('SlideshowController', ['$scope', function($scope){
-    $scope.myInterval = 5000;
-    $scope.slides = [{image: '/static/graphics/Rabbit-logo.png', text: 'RabbitLOGO!'}, {image: '/static/graphics/Rabbit.png', text: 'Rabbit picture'}];
-}])
-.directive('slideshow', function() {
     return {
-        restrict: 'E',
-        scope: {
-            slides: '=slides'
-        },
-        templateUrl: 'static/components/slideshow.html'
+      restrict: 'A',
+      link: function (scope, element, attrs) {
+        var settings = angular.extend({
+          container: 'html, body',
+          scrollTo: angular.element(),
+          offset: 0,
+          duration: 150,
+          easing: 'swing'
+        }, attrs);
+        
+        element.on('click', function () {
+          $timeout(scroll(settings));
+        });
+      }
     };
-});
+  }]);
 //entry point for the application
 angular.module('portofolio',[
 	'ui.router',
 	'ui.bootstrap',
 	'ui.utils',
 	'angular-inview',
+	'scrollto'
 ]).
 config(function($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise('/frontpage');
-/*	var html5Mode = (window.history && window.history.pushState);
+	$urlRouterProvider.otherwise('/index');
+	/*var html5Mode = (window.history && window.history.pushState);
 	$locationProvider.html5Mode(html5Mode).hashPrefix('!');*/
 
 	$stateProvider
 		.state('frontpage', {
-			url: "/frontpage",
+			url: '/index',
 			views: {
 				'banner': {
 					templateUrl: "static/partials/banner.html"
@@ -34591,24 +34563,4 @@ config(function($stateProvider, $urlRouterProvider) {
 				}
 			}
 		});
-}).directive('scrollOnClick', function() {
-  return {
-    restrict: 'A',
-    link: function(scope, $elm, attrs) {
-      var idToScroll = attrs.href;
-      $elm.on('click', function() {
-        var $target;
-        if (idToScroll) {
-          $target = $(idToScroll);
-        } else {
-          $target = $elm;
-        }
-        $("body").animate({scrollTop: $target.offset().top}, "slow");
-      });
-    }
-  }
 });
-function ProjectsCtrl($scope, $log, $location){
-	$scope.sliderInterval = 5000;
-	$scope.slides = [{image:'static/graphics/Project-Frame.png', text: 'Rabbit logo!'}, {image:'static/graphics/Project-Frame.png'}];
-};
