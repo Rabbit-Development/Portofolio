@@ -1,6 +1,7 @@
 .projects-container {
 	background-color: #fff;
-	height: 80vh;
+	padding-top: 5vh;
+	padding-bottom: 10vh;
 }
 
 .product-header {

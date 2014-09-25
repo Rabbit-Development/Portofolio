@@ -8,10 +8,41 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body ng-app="portofolio">
-<div ui-view></div>
-<!-- Js files -->
-{% assets "portofolio-script" %}
-<script type="text/javascript" src="{{ ASSET_URL }}"></script>
-{% endassets %}
+	<nav id="#home" class="navbar" >
+		<div class="container-fluid" in-view-container>
+			<div class="navbar-header" in-view="$inview ? topButton = false : topButton = true">
+				<button type="button" class="navbar-toggle collapsed" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+			        <span class="sr-only">Toggle navigation</span>
+			       	<i class="fa fa-2x fa-bars"></i>
+		      	</button>
+		      	<a class="navbar-brand" ui-sref="frontpage">
+		      		<img src="static/graphics/Rabbit-logo.png" alt="Rabbit Development Logo" height="50px">
+		      	</a>
+			</div>
+			<div collapse="navCollapsed" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a scroll-on-click href="#home">Hjem</a></li>
+					<li><a scroll-on-click href="#products">Tjenester</a></li>
+					<li><a scroll-on-click href="#projects">Prosjekter</a></li>
+					<li><a scroll-on-click href="#about">Om oss</a></li>
+					<li><a scroll-on-click href="#contact">Kontakt oss</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div ui-view="banner"></div>
+	<div id="#products" ui-view="products"></div>
+	<div id="#projects" ui-view="projects"></div>
+	<div id="#about" ui-view="about"></div>
+	<div id="#contact" ui-view="contact"></div>
+	<div class="row footer">
+	</div>
+	<button scroll-on-click href="#home" class="top-button" ng-show="topButton">
+		<i class="fa fa-2x fa-chevron-up"></i>
+	</button>
+	<!-- Js files -->
+	{% assets "portofolio-script" %}
+	<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+	{% endassets %}
 </body>
 </html>

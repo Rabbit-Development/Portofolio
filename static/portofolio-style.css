@@ -75,8 +75,6 @@ hr {
 }
 
 .navbar {
-	padding-top: 15px;
-	padding-bottom: 15px;
 	margin-bottom: 0px;
 	border-bottom: 1px solid green;
 	background-color: #fff;
@@ -97,12 +95,16 @@ hr {
 }
 
 .navbar-toggle {
+	margin-top: 15px;
+	margin-bottom: 15px;
 	border-radius: 8px;
 	border: 1px solid #eee;
 	height: 100%;
 }
 
 .navbar-nav > li > a {
+	margin-top: 15px;
+	margin-bottom: 15px;
 	font-size: 18px;
 	background-color: #fff;
 }
@@ -171,7 +173,8 @@ hr {
 }
 .projects-container {
 	background-color: #fff;
-	height: 80vh;
+	padding-top: 5vh;
+	padding-bottom: 10vh;
 }
 
 .product-header {
@@ -186,9 +189,10 @@ hr {
 	font-family: 'Open Sans', Verdana, sans-serif;
 }
 .about-container {
-	height: 80vh;
 	background-image: url("graphics/Bannerpattern.png");
 	color: #fff;
+	padding-top: 5vh;
+	padding-bottom: 10vh;
 }
 
 .person-image{

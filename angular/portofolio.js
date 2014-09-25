@@ -3,7 +3,7 @@ angular.module('portofolio',[
 	'ui.router',
 	'ui.bootstrap',
 	'ui.utils',
-	'angular-inview'
+	'angular-inview',
 ]).
 config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/frontpage');
@@ -13,7 +13,38 @@ config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider
 		.state('frontpage', {
 			url: "/frontpage",
-			templateUrl: "static/partials/frontpage/main.html",
-			controller: FrontpageCtrl
+			views: {
+				'banner': {
+					templateUrl: "static/partials/banner.html"
+				},
+				'products': {
+					templateUrl: "static/partials/products.html"
+				},
+				'projects': {
+					templateUrl: "static/partials/projects.html"
+				},
+				'about': {
+					templateUrl: "static/partials/about.html"
+				},
+				'contact': {
+					templateUrl: "static/partials/contact.html"
+				}
+			}
 		});
+}).directive('scrollOnClick', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, $elm, attrs) {
+      var idToScroll = attrs.href;
+      $elm.on('click', function() {
+        var $target;
+        if (idToScroll) {
+          $target = $(idToScroll);
+        } else {
+          $target = $elm;
+        }
+        $("body").animate({scrollTop: $target.offset().top}, "slow");
+      });
+    }
+  }
 });
